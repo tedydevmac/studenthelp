@@ -1,4 +1,4 @@
-studenthelp Telegram bot
+***studenthelp Telegram bot***
 
 Functionality:
 - View timetable
