@@ -5,11 +5,11 @@ from PIL import Image
 import io
 
 # OpenAI API key
-openai.api_key = "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"
+openai.api_key = "ENTER-KEY-HERE"
 messages = [ {"role": "system", "content": "You are a intelligent assistant."} ]
 
 # Replace ‘YOUR_API_TOKEN’ with the API token you received from the BotFather
-API_TOKEN = "6656442601:AAGWVv7A-8G5RKJOmdYGn1HZCtUOOpa4T8s"
+API_TOKEN = "YOUR_API_TOKEN"
 bot = telebot.TeleBot(API_TOKEN)
 
 homework_list = ["HW1","HW2","HW3","HW4","HW5"]
