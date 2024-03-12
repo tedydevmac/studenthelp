@@ -8,8 +8,8 @@ import io
 openai.api_key = "ENTER-KEY-HERE"
 messages = [ {"role": "system", "content": "You are a intelligent assistant."} ]
 
-# Replace ‘YOUR_API_TOKEN’ with the API token you received from the BotFather
-API_TOKEN = "YOUR_API_TOKEN"
+# Replace ‘ENTER-KEY-HERE’ with the API token you received from the BotFather
+API_TOKEN = "ENTER-KEY-HERE"
 bot = telebot.TeleBot(API_TOKEN)
 
 homework_list = ["HW1","HW2","HW3","HW4","HW5"]
@@ -19,7 +19,6 @@ user_states = {}
 # help command
 @bot.message_handler(commands=["help"])
 def sendImage(message):
-    user_id = message.from_user.id
     bot.reply_to(message, "\n".join(command_list))
 
 # timetable
