@@ -1,6 +1,6 @@
-#studenthelp Telegram bot
+# studenthelp Telegram bot
 
-##Functionality:
+## Functionality:
 - View timetable
 - Homework To-do list
 - GPT prompts
