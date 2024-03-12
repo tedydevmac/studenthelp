@@ -5,15 +5,22 @@ from PIL import Image
 import io
 
 # OpenAI API key
-openai.api_key = "ENTER-KEY-HERE"
+openai.api_key = "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"
 messages = [ {"role": "system", "content": "You are a intelligent assistant."} ]
 
 # Replace ‘YOUR_API_TOKEN’ with the API token you received from the BotFather
-API_TOKEN = "ENTER-KEY-HERE"
+API_TOKEN = "6656442601:AAGWVv7A-8G5RKJOmdYGn1HZCtUOOpa4T8s"
 bot = telebot.TeleBot(API_TOKEN)
 
 homework_list = ["HW1","HW2","HW3","HW4","HW5"]
+command_list = ["/help - see list of commands", "/timetable - view timetable", "/hw - view homework list", "/addhw - add item to your homework list", "removehw - remove specified item from your homework list", "/gpt - talk with ChatGPT", "/hwhelp - ask ChatGPT for homework help by sending a photo of your question"]
 user_states = {}
+
+# help command
+@bot.message_handler(commands=["help"])
+def sendImage(message):
+    user_id = message.from_user.id
+    bot.reply_to(message, "\n".join(command_list))
 
 # timetable
 @bot.message_handler(commands=["timetable"])
